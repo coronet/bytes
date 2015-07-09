@@ -1,2 +1,2 @@
 # bytes
-A simple, immutable byte array
+A simple, immutable byte array type.
