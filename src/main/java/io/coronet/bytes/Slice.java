@@ -1,7 +1,9 @@
 package io.coronet.bytes;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.ByteBuffer;
 
 /**
@@ -80,5 +82,10 @@ final class Slice extends Bytes {
     @Override
     public InputStream asInputStream() {
         return new ByteArrayInputStream(array, offset, length);
+    }
+
+    @Override
+    public void writeTo(OutputStream stream) throws IOException {
+        stream.write(array, offset, length);
     }
 }

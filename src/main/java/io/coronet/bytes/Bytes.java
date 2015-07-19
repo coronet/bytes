@@ -1,6 +1,8 @@
 package io.coronet.bytes;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
@@ -102,6 +104,14 @@ public abstract class Bytes implements Iterable<Byte>, Comparable<Bytes> {
      * @return a new InputStream wrapping this array
      */
     public abstract InputStream asInputStream();
+
+    /**
+     * Writes this byte array to the given {@code OutputStream}.
+     *
+     * @param stream the stream to write to
+     * @throws IOException on error writing to the stream
+     */
+    public abstract void writeTo(OutputStream stream) throws IOException;
 
     @Override
     public Iterator<Byte> iterator() {
