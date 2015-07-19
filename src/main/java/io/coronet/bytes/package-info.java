@@ -1,8 +1,8 @@
 /**
- * Bytes is a tiny library that provides a slightly nicer way to deal with
- * byte arrays from Java. {@code Bytes} are stateless like {@code byte[]}s,
- * and immutable so they can be shared across threads with confidence that
- * no one is going to ruin things.
+ * Bytes is a tiny library that provides a nicer way of working with byte arrays
+ * in Java. {@code Bytes} are stateless like {@code byte[]}s, but immutable so
+ * they can be shared across threads with confidence that no one is going to
+ * accidentally modify them.
  *
  * @author David Murray &lt;fernomac@coronet.io&gt;
  */
