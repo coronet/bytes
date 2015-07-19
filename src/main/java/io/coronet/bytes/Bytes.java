@@ -60,7 +60,8 @@ public abstract class Bytes implements Iterable<Byte>, Comparable<Bytes> {
      * @return an immutable slice of the given array
      * @throws NullPointerException if array is null
      * @throws IndexOutOfBoundsException
-     *             if offset < 0, length < 0, or offset + length > array.length
+     *             if offset &lt; 0, length &lt; 0, or offset + length &gt;
+     *             array.length
      */
     public static Bytes wrap(byte[] array, int offset, int length) {
         return new Slice(array, offset, length);
@@ -74,9 +75,9 @@ public abstract class Bytes implements Iterable<Byte>, Comparable<Bytes> {
     /**
      * Reads a single element of this byte array.
      *
-     * @param i the index of the element to read
+     * @param index the index of the element to read
      * @return the value of the given element
-     * @throws IndexOutOfBoundsException if i < 0 or i >= size()
+     * @throws IndexOutOfBoundsException if i &lt; 0 or i &gt;= size()
      */
     public abstract byte get(int index);
 
@@ -87,7 +88,8 @@ public abstract class Bytes implements Iterable<Byte>, Comparable<Bytes> {
      * @param length the length of the slice
      * @return a slice of this array
      * @throws IndexOutOfBoundsException
-     *             if offset < 0, length < 0, or offset + length > this.length
+     *             if offset &lt; 0, length &lt; 0, or offset + length &gt;
+     *             this.length
      */
     public abstract Bytes slice(int offset, int length);
 
